@@ -1,4 +1,5 @@
 import { CMS_NAME, CMS_URL } from "../lib/constants";
+import React from "react";
 
 export default function Intro() {
   return (
