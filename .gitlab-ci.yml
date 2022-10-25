@@ -1,6 +1,6 @@
 image: node:latest
 stages: # List of stages for jobs, and their order of execution
-  - istall
+  - install
   - build
   - test
   - deploy
