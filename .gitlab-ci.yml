@@ -30,9 +30,9 @@ lint-test-job: # This job also runs in the test stage.
     - npm run lint
 
 format-test-job:
- stage: test
- script:
-  - npm run format
+  stage: test
+  script:
+    - npm run format
 
 deploy-job: # This job runs in the deploy stage.
   stage: deploy # It only runs when *both* jobs in the test stage complete successfully.
