@@ -39,3 +39,7 @@ deploy-job: # This job runs in the deploy stage.
   script:
     - echo "Deploying application..."
     - echo "Application successfully deployed."
+  rules:
+    - if: $CI_COMMIT_BRANCH != "main"
+      when: never
+    - when: on_success
