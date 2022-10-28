@@ -8,8 +8,8 @@ stages: # List of stages for jobs, and their order of execution
 install:
   stage: install
   script:
-  - echo "install"
-    - npm install
+    - echo "install"
+      - npm install
   artifacts:
     paths:
       - node_modules/
