@@ -1,4 +1,4 @@
-name: GitHub Actions Demo
+name: MP1 Pipeline
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 
@@ -60,7 +60,7 @@ jobs:
         path: node_modules/
         key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
 
-    - name: test jest
+    - name: test prettier
       run: npm run format
 
   lint-test-job:
@@ -78,7 +78,7 @@ jobs:
         path: node_modules/
         key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
 
-    - name: test jest
+    - name: test linter
       run: npm run lint
 
 
