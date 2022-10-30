@@ -107,7 +107,7 @@ jobs:
         
   deploy:
     runs-on: ubuntu-latest
-    needs: [install,jest-test-job,format-test-job,lint-test-job]
+    needs: [build]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
