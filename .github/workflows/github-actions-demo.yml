@@ -125,12 +125,4 @@ jobs:
         with:
           name: build-files
           path: out/
-
-      - name: Netlify Deploy
-        uses: jsmrcaga/action-netlify-deploy@v1.8.0
-        with:
-          # Auth token to use with netlify
-          NETLIFY_AUTH_TOKEN: ${{secrets.NETLIFY_AUTH_TOKEN}}
-          # Your Netlify site id
-          NETLIFY_SITE_ID: ${{secrets.NETLIFY_SITE_ID}}
-					build_directory: 'out/'
+        run: npx netlify-cli deploy --site ${{secrets.NETLIFY_SITE_ID}} --auth ${{secrets.NETLIFY_AUTH_TOKEN}} --prod
