@@ -4,6 +4,8 @@ on:
   push:
   schedule:
     - cron: '0 0 * * *'
+  repository_dispatch:
+    types: [publish-event]
    
 env:
   CONTENTFUL_ACCESS_TOKEN: ${{secrets.CONTENTFUL_ACCESS_TOKEN}}
