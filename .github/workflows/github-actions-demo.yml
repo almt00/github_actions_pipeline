@@ -1,6 +1,10 @@
 name: MP1 Pipeline
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
+on:
+  push:
+  schedule:
+    - cron: 0 0 * * *
+    - cron: 30 10 * * *
 
 env:
   CONTENTFUL_ACCESS_TOKEN: ${{secrets.CONTENTFUL_ACCESS_TOKEN}}
