@@ -3,8 +3,9 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   push:
   schedule:
-    - cron: 0 0 * * *
-    - cron: 15 * * * *
+   # - cron: 0 0 * * *
+    - cron: '15 * * * *'
+    - cron: '0 12 * * *'
 
 env:
   CONTENTFUL_ACCESS_TOKEN: ${{secrets.CONTENTFUL_ACCESS_TOKEN}}
@@ -33,9 +34,6 @@ jobs:
         name: Install dependencies
         continue-on-error: false
         run: npm install
-
-      #- name: Install dependencies
-      #  run: npm install
 
   jest-test-job:
    runs-on: ubuntu-latest
